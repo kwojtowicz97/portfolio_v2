@@ -20,8 +20,8 @@ export const Mockups = ({
   onFeatureClickHandler,
 }: TMockupsProps) => {
   return (
-    <div className='relative w-full -translate-y-3'>
-      <MacbookMockup left='-105px'>
+    <div className='relative ml-0 h-full w-full -translate-y-3 xl:ml-12'>
+      <MacbookMockup left='-75px'>
         <Carousel
           carouselSlideAxis='y'
           initialActiveItem={initial}

@@ -30,11 +30,11 @@ const ProjectsSection = ({
 
   return (
     <section
-      className={`group relative my-7 flex space-x-4 duration-[1500ms] ${
+      className={`group relative my-7 flex  justify-center space-x-4 duration-[1500ms] xl:justify-start ${
         reversed ? 'flex-row-reverse space-x-reverse' : 'flex-row'
       } ${sectionTranslate ? 'opacity-100' : 'opacity-0'}`}
     >
-      <div className='rounded-3x ml-10 aspect-square w-1/3'>
+      <div className='ml-10 hidden aspect-square w-1/3 xl:block'>
         <div className='relative flex h-full flex-col justify-center overflow-hidden'>
           <ul className='h-full w-full pt-[50%]'>
             <Carousel
@@ -49,7 +49,7 @@ const ProjectsSection = ({
           </ul>
         </div>
       </div>
-      <div className='flex h-[400px] w-2/3 flex-col rounded-3xl pl-10'>
+      <div className='mx-auto flex h-[400px] w-[680px] shrink-0 origin-center scale-[0.45]  flex-col rounded-3xl md:scale-[1] xl:w-2/3 xl:scale-100'>
         <Mockups
           currentFeature={currentFeature}
           initial={initialFeatureIndex || 0}

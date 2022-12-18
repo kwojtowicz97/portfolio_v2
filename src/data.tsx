@@ -25,7 +25,7 @@ export const projects: TProjects = {
     features: [
       {
         id: '1',
-        name: 'Fully responsive design',
+        name: 'Responsive design',
         ipPhoto: '../assets/ip_sample.jpeg',
         mbPhoto: '../assets/mb_sample.jpeg',
       },

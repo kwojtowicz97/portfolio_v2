@@ -11,7 +11,7 @@ const Footer = () => {
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      <div className='relative box-border flex h-72 w-full flex-col overflow-hidden rounded-3xl bg-gradient-to-tr from-amber-100 to-cyan-200 p-10'>
+      <div className='relative box-border flex w-full flex-col overflow-hidden rounded-3xl bg-gradient-to-tr from-amber-100 to-cyan-200 p-10'>
         <h2 className='text-4xl font-semibold'>Want to work together?</h2>
         <p className='mt-4'>
           Thank you for visiting my portfolio site! If you are interested in my
@@ -20,7 +20,7 @@ const Footer = () => {
           phone to discuss any opportunities you may have.
         </p>
         <div className='mt-auto flex'>
-          <button className='rounded-full bg-black py-3 px-8 text-white transition-colors hover:bg-gray-800'>
+          <button className='mt-10 rounded-full bg-black py-3 px-8 text-white transition-colors hover:bg-gray-800'>
             Contact me
           </button>
         </div>
