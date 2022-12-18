@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react'
-import { useSpringCarousel } from 'react-spring-carousel'
+import { useTransitionCarousel } from 'react-spring-carousel'
 import { TFeature } from '../data'
 import { TListItemProps } from './FeatureListItem'
 
-type TCarouselProps = {
+type TPhotosCarouselProps = {
   carouselSlideAxis: 'x' | 'y'
-  itemsPerSlide: number
-  initialActiveItem: number
   items: TFeature[]
   currentFeature: TFeature
   onFeatureClickHandler: (feature: TFeature) => void
@@ -17,19 +15,15 @@ type TCarouselProps = {
   }: TListItemProps) => JSX.Element
 }
 
-export const Carousel = ({
+export const PhotosCarousel = ({
   carouselSlideAxis,
-  itemsPerSlide,
-  initialActiveItem,
   items,
   ItemRender,
   currentFeature,
   onFeatureClickHandler,
-}: TCarouselProps) => {
-  const { carouselFragment, slideToItem } = useSpringCarousel({
+}: TPhotosCarouselProps) => {
+  const { carouselFragment, slideToItem } = useTransitionCarousel({
     carouselSlideAxis,
-    itemsPerSlide,
-    initialActiveItem,
     withLoop: true,
 
     items: items.map((feature) => {

@@ -8,7 +8,7 @@ type TIPhoneMockupProps = {
 const IPhoneMockup = ({ left, children }: TIPhoneMockupProps) => {
   return (
     <div style={{ left: left }} className='absolute'>
-      <div className='absolute top-[36px] left-1/2 w-[154px] -translate-x-1/2 overflow-hidden rounded-md'>
+      <div className='absolute top-[36px] left-1/2  h-[333px] w-[154px] -translate-x-1/2 overflow-hidden rounded-md bg-white'>
         {children}
       </div>
       <img

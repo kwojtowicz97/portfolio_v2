@@ -8,7 +8,7 @@ import { projects } from './data'
 function App() {
   return (
     <div className='App'>
-      <div className='mx-auto flex flex-col space-y-4 p-0 px-4 md:px-0 xl:max-w-6xl'>
+      <div className='mx-auto flex flex-col space-y-4 px-4 xl:max-w-6xl xl:p-0 '>
         <Navbar />
         <div className='flex flex-col space-y-4'>
           <AboutMeSection />

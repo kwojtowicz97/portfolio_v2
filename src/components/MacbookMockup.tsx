@@ -9,7 +9,7 @@ type TMacbookMockupProps = {
 const MacbookMockup = ({ left, children }: TMacbookMockupProps) => {
   return (
     <div style={{ left: left }} className='absolute left-[-49px]'>
-      <div className='absolute top-[43px] left-1/2 h-[298px] w-[475px] -translate-x-1/2 overflow-hidden'>
+      <div className='absolute top-[43px] left-1/2 h-[298px] w-[477px] -translate-x-1/2 overflow-hidden'>
         {children}
       </div>
       <img

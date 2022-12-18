@@ -5,6 +5,7 @@ import IPhoneListItem from './IPhoneListItem'
 import IPhoneMockup from './IPhoneMockup'
 import MacbookListItem from './MacbookListItem'
 import MacbookMockup from './MacbookMockup'
+import { PhotosCarousel } from './PhotosCarousel'
 
 type TMockupsProps = {
   initial: number
@@ -22,22 +23,18 @@ export const Mockups = ({
   return (
     <div className='relative ml-0 h-full w-full -translate-y-3 xl:ml-12'>
       <MacbookMockup left='-75px'>
-        <Carousel
+        <PhotosCarousel
           carouselSlideAxis='y'
-          initialActiveItem={initial}
           items={project.features}
-          itemsPerSlide={1}
           ItemRender={MacbookListItem}
           currentFeature={currentFeature}
           onFeatureClickHandler={onFeatureClickHandler}
         />
       </MacbookMockup>
       <IPhoneMockup left='415px'>
-        <Carousel
+        <PhotosCarousel
           carouselSlideAxis='x'
-          initialActiveItem={initial}
           items={project.features}
-          itemsPerSlide={1}
           ItemRender={IPhoneListItem}
           currentFeature={currentFeature}
           onFeatureClickHandler={onFeatureClickHandler}
