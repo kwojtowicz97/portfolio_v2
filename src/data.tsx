@@ -11,6 +11,7 @@ export type TFeature = {
 
 export type TProject = {
   name: string
+  description: string
   header: string
   features: TFeature[]
 }
@@ -18,6 +19,8 @@ export type TProject = {
 export const projects: TProjects = {
   jobFinder: {
     name: 'Job Finder',
+    description:
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat itaque neque maxime suscipit, magnam, odit aliquid ipsa nihil, nam laborum illo mollitia officia est. Accusamus maxime non impedit dicta odit fugiat dolor commodi, suscipit, minus hic blanditiis, est beatae voluptates possimus! Ea, consequatur corrupti dolorum beatae sunt perferendis fugiat fuga!',
     header: 'Job posting website',
     features: [
       {
