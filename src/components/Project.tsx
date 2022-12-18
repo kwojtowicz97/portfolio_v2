@@ -11,7 +11,7 @@ type TProjectProps = {
 
 const Project = ({ project, initialFeatureIndex, reversed }: TProjectProps) => {
   return (
-    <div>
+    <div className='rounded-3xl bg-gray-200'>
       <ProjectDescription project={project} />
       <ProjectsSection
         project={project}

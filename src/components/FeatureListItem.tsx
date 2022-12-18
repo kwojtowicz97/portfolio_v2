@@ -18,7 +18,7 @@ export const FeatureListItem = ({
     >
       <button
         className={`select-none duration-300 ${
-          isCurrent ? 'scale-110 font-semibold' : 'scale-75 text-zinc-500'
+          isCurrent ? 'scale-110 font-semibold' : 'scale-[0.6] text-zinc-500'
         }`}
         onClick={() => liClickHandler(feature)}
       >

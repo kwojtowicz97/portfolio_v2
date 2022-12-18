@@ -30,11 +30,11 @@ const ProjectsSection = ({
 
   return (
     <section
-      className={`group relative flex space-x-4 duration-[1500ms] ${
+      className={`group relative my-7 flex space-x-4 duration-[1500ms] ${
         reversed ? 'flex-row-reverse space-x-reverse' : 'flex-row'
       } ${sectionTranslate ? 'opacity-100' : 'opacity-0'}`}
     >
-      <div className='aspect-square w-1/3 rounded-3xl bg-white'>
+      <div className='rounded-3x ml-10 aspect-square w-1/3'>
         <div className='relative flex h-full flex-col justify-center overflow-hidden'>
           <ul className='h-full w-full pt-[50%]'>
             <Carousel
