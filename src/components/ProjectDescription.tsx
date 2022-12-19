@@ -11,8 +11,8 @@ const ProjectDescription = ({ project }: TProjectDescriptionProps) => {
       <div className='mt-7 flex items-center space-x-2'>
         <h1 className='mr-2 text-4xl font-semibold'>{project.name}</h1>
         <button className='text-md h-9 w-9 rounded-full bg-black text-white transition-colors hover:bg-gray-800 sm:w-auto sm:px-4'>
-          <span className='hidden sm:inline'>Live</span>
           <i className='fa-solid fa-arrow-up-right-from-square'></i>
+          <span className='ml-2 hidden sm:inline'>Live</span>
         </button>
         <button className='text-md aspect-square h-9 w-9 rounded-full bg-black text-white transition-colors hover:bg-gray-800'>
           <i className='fa-brands fa-github text-lg'></i>
