@@ -29,6 +29,7 @@ export const Carousel = ({
   const { carouselFragment, slideToItem } = useSpringCarousel({
     carouselSlideAxis,
     itemsPerSlide,
+    disableGestures: true,
     initialActiveItem,
     withLoop: true,
 

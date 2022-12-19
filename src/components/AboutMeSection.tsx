@@ -7,7 +7,7 @@ const AboutMeSection = () => {
 
   return (
     <section
-      className={`group flex flex-col-reverse space-y-4 space-y-reverse duration-[1500ms] md:flex-row md:space-x-4 md:space-y-0 ${
+      className={`group flex flex-col-reverse space-y-4 space-y-reverse delay-300 duration-[1500ms] md:flex-row md:space-x-4 md:space-y-0 ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}
     >
@@ -41,10 +41,10 @@ const AboutMeSection = () => {
           </div>
         </div>
       </div>
-      <img
-        className='h-[500px] max-h-60 rounded-3xl object-cover md:max-h-fit md:w-1/3'
-        src={require('../assets/photo.jpeg')}
-      ></img>
+      <div
+        className='h-[500px] max-h-60 rounded-3xl bg-gray-200 object-cover md:max-h-fit md:w-1/3'
+        // src={require('../assets/photo.jpeg')}
+      ></div>
     </section>
   )
 }

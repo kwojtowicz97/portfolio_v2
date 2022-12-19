@@ -17,7 +17,7 @@ const ProjectDescription = ({ project }: TProjectDescriptionProps) => {
           <i className='fa-brands fa-github text-lg'></i>
         </button>
       </div>
-      <p className='mb-8 py-2 text-slate-600'>{project.description}</p>
+      <p className='py-2 text-slate-600'>{project.description}</p>
     </div>
   )
 }

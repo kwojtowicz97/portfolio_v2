@@ -8,29 +8,25 @@ type TProjectsSectionProps = {
   reversed?: boolean
   initialFeatureIndex?: number
   project: TProject
+  currentFeature: TFeature
+  onFeatureClickHandler: (feature: TFeature) => void
 }
 
 const ProjectsSection = ({
   reversed,
   initialFeatureIndex,
   project,
+  currentFeature,
+  onFeatureClickHandler,
 }: TProjectsSectionProps) => {
   const [sectionTranslate, setSectionTranslate] = useState(false)
   useEffect(() => {
     setTimeout(() => setSectionTranslate(true), 100)
   }, [])
 
-  const [currentFeature, setCurrentFeature] = useState(
-    project.features[initialFeatureIndex || 0]
-  )
-
-  const onFeatureClickHandler = (feature: TFeature) => {
-    setCurrentFeature(feature)
-  }
-
   return (
     <section
-      className={`group relative my-7 flex  justify-center space-x-4 duration-[1500ms] xl:justify-start ${
+      className={`group relative my-2 flex h-[150px] items-center justify-center space-x-4 transition-transform duration-[1500ms] sm:h-[280px] md:h-[360px] xl:h-auto xl:justify-start ${
         reversed ? 'flex-row-reverse space-x-reverse' : 'flex-row'
       } ${sectionTranslate ? 'opacity-100' : 'opacity-0'}`}
     >
@@ -49,7 +45,7 @@ const ProjectsSection = ({
           </ul>
         </div>
       </div>
-      <div className='mx-auto flex h-[400px] w-[680px] shrink-0 origin-center scale-[0.45]  flex-col rounded-3xl md:scale-[1] xl:w-2/3 xl:scale-100'>
+      <div className='mx-auto flex h-[400px] w-[680px] shrink-0 origin-center scale-[0.45]  flex-col rounded-3xl sm:scale-[0.8] md:scale-[1] xl:w-2/3'>
         <Mockups
           currentFeature={currentFeature}
           initial={initialFeatureIndex || 0}

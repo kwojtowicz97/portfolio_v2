@@ -14,7 +14,7 @@ export const FeatureListItem = ({
   const isCurrent = currentFeature === feature
   return (
     <li
-      className={`mb-5 flex w-full cursor-pointer justify-center pt-0 text-3xl`}
+      className={`mb-6 flex w-full -translate-y-1/2 cursor-pointer justify-center pt-0 text-3xl`}
     >
       <button
         className={`select-none duration-300 ${

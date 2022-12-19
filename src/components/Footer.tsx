@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <section
-      className={`group flex space-x-4 duration-[1500ms] ${
+      className={`group flex space-x-4 delay-1000 duration-[1500ms] ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}
     >
