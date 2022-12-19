@@ -10,11 +10,11 @@ function App() {
     <div className='App'>
       <div className='mx-auto flex flex-col  px-4 xl:max-w-6xl xl:p-0 '>
         <Navbar />
-        <div className='flex flex-col space-y-4'>
+        <main className='flex flex-col space-y-4'>
           <AboutMeSection />
           <Project project={projects.jobFinder} />
-          <Footer />
-        </div>
+        </main>
+        <Footer />
       </div>
     </div>
   )

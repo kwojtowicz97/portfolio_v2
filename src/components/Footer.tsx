@@ -6,8 +6,8 @@ const Footer = () => {
   useInterval(() => setSectionTranslate(true), 100)
 
   return (
-    <section
-      className={`group flex space-x-4 delay-1000 duration-[1500ms] ${
+    <footer
+      className={`group mt-4 flex space-x-4 delay-1000 duration-[1500ms] ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}
     >
@@ -25,7 +25,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 

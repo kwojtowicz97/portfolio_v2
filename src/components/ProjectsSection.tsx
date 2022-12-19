@@ -25,7 +25,7 @@ const ProjectsSection = ({
   }, [])
 
   return (
-    <section
+    <div
       className={`group relative my-2 flex items-center justify-center transition-transform duration-[1500ms] xl:justify-start xl:space-x-4 ${
         reversed ? 'flex-row-reverse space-x-reverse' : 'flex-row'
       } ${sectionTranslate ? 'opacity-100' : 'opacity-0'}`}
@@ -53,7 +53,7 @@ const ProjectsSection = ({
           project={project}
         />
       </div>
-    </section>
+    </div>
   )
 }
 

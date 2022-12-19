@@ -10,7 +10,8 @@ const ProjectDescription = ({ project }: TProjectDescriptionProps) => {
     <div className='px-10'>
       <div className='mt-7 flex items-center space-x-2'>
         <h1 className='mr-2 text-4xl font-semibold'>{project.name}</h1>
-        <button className='text-md aspect-square h-9 w-9 rounded-full bg-black text-white transition-colors hover:bg-gray-800'>
+        <button className='text-md h-9 w-9 rounded-full bg-black text-white transition-colors hover:bg-gray-800 sm:w-auto sm:px-4'>
+          <span className='hidden sm:inline'>Live</span>
           <i className='fa-solid fa-arrow-up-right-from-square'></i>
         </button>
         <button className='text-md aspect-square h-9 w-9 rounded-full bg-black text-white transition-colors hover:bg-gray-800'>
