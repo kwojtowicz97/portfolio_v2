@@ -2,19 +2,18 @@ import React, { Children } from 'react'
 import { useTransitionCarousel } from 'react-spring-carousel'
 
 type TMacbookMockupProps = {
-  left: string
   children: React.ReactNode
 }
 
-const MacbookMockup = ({ left, children }: TMacbookMockupProps) => {
+const MacbookMockup = ({ children }: TMacbookMockupProps) => {
   return (
-    <div style={{ left: left }} className='absolute left-[-49px]'>
-      <div className='absolute top-[43px] left-1/2 h-[298px] w-[477px] -translate-x-1/2 overflow-hidden'>
+    <div className='absolute h-full -translate-x-[5%]'>
+      <div className='absolute top-[4.3%] left-1/2 aspect-[16/10] w-[79%] -translate-x-1/2 overflow-hidden'>
         {children}
       </div>
       <img
-        className={`relative w-[700px]  max-w-none`}
-        src={require('../assets/macbook_mockup.png')}
+        className={`h-full`}
+        src={require('../assets/macbook_mockup.webp')}
       ></img>
     </div>
   )

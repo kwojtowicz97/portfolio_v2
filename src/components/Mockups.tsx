@@ -21,8 +21,8 @@ export const Mockups = ({
   onFeatureClickHandler,
 }: TMockupsProps) => {
   return (
-    <div className='relative ml-0 h-full w-full -translate-y-3 xl:ml-12'>
-      <MacbookMockup left='-75px'>
+    <div className='relative flex aspect-[768/400] w-full justify-center'>
+      <MacbookMockup>
         <PhotosCarousel
           carouselSlideAxis='y'
           items={project.features}

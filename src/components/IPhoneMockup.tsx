@@ -7,13 +7,13 @@ type TIPhoneMockupProps = {
 
 const IPhoneMockup = ({ left, children }: TIPhoneMockupProps) => {
   return (
-    <div style={{ left: left }} className='absolute'>
-      <div className='absolute top-[36px] left-1/2  h-[333px] w-[154px] -translate-x-1/2 overflow-hidden rounded-md bg-white'>
+    <div className='absolute h-full translate-x-[144%]'>
+      <div className='absolute top-[2.3%] left-1/2  aspect-[18/39] w-[90%] -translate-x-1/2 overflow-hidden rounded-lg bg-white'>
         {children}
       </div>
       <img
-        className='relative top-[6px] w-[279px] max-w-none'
-        src={require('../assets/iPhone13_mockup.png')}
+        className='relative h-full'
+        src={require('../assets/iPhone13_mockup.webp')}
       ></img>
     </div>
   )

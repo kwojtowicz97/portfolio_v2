@@ -26,7 +26,7 @@ const ProjectsSection = ({
 
   return (
     <section
-      className={`group relative my-2 flex h-[150px] items-center justify-center space-x-4 transition-transform duration-[1500ms] sm:h-[280px] md:h-[360px] xl:h-auto xl:justify-start ${
+      className={`group relative my-2 flex items-center justify-center transition-transform duration-[1500ms] xl:justify-start xl:space-x-4 ${
         reversed ? 'flex-row-reverse space-x-reverse' : 'flex-row'
       } ${sectionTranslate ? 'opacity-100' : 'opacity-0'}`}
     >
@@ -45,7 +45,7 @@ const ProjectsSection = ({
           </ul>
         </div>
       </div>
-      <div className='mx-auto flex h-[400px] w-[680px] shrink-0 origin-center scale-[0.45]  flex-col rounded-3xl sm:scale-[0.8] md:scale-[1] xl:w-2/3'>
+      <div className='relative flex w-full shrink-0 origin-center flex-col rounded-3xl p-5 xl:w-2/3 xl:p-12'>
         <Mockups
           currentFeature={currentFeature}
           initial={initialFeatureIndex || 0}
