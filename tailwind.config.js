@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: { fontFamily: { fs: ['"Font Awesome 6 Free"'] } },
+    plugins: [require('tailwind-scrollbar-hide')],
   },
-  plugins: [require('tailwind-scrollbar-hide')],
 }

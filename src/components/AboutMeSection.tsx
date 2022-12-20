@@ -8,12 +8,12 @@ const AboutMeSection = () => {
   return (
     <section
       id='about-me'
-      className={`group flex flex-col-reverse space-y-4 space-y-reverse delay-300 duration-[1500ms] md:flex-row md:space-x-4 md:space-y-0 ${
+      className={`space-y group flex flex-col space-y-4 delay-300 duration-[1500ms] md:flex-row md:space-x-4 md:space-y-0 ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div className='relative box-border flex flex-col overflow-hidden rounded-3xl p-10 md:w-2/3'>
-        <div className='absolute top-[-50%] left-[-50%] -z-10 h-[200%] w-[200%] bg-gradient-to-r from-sky-500 to-sky-700 group-hover:animate-[spin_3s_linear_infinite]'></div>
+        <div className='absolute top-[-50%] left-[-50%] -z-10 h-[200%] w-[200%] animate-[spin_3s_linear_infinite] bg-gradient-to-r from-sky-500 to-sky-700'></div>
         <h1 className='text-5xl font-semibold'>
           Hello, I'm Kamil <br />
           Frontend Developer
@@ -42,10 +42,24 @@ const AboutMeSection = () => {
           </div>
         </div>
       </div>
-      <div
-        className='h-[500px] max-h-60 rounded-3xl bg-gray-200 object-cover md:max-h-fit md:w-1/3'
-        // src={require('../assets/photo.jpeg')}
-      ></div>
+      <div className='h-[500px] max-h-60 rounded-3xl bg-sky-100 object-cover p-5 md:max-h-fit md:w-1/3'>
+        <ul className='space-y-2 font-semibold'>
+          <li>
+            <img
+              src='https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg'
+              className='fa-brands fa-react mr-2 w-8 rounded-full bg-white p-2 shadow'
+            />
+            React
+          </li>
+          <li>
+            <img
+              src='https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg'
+              className='fa-brands fa-react mr-2 w-8 rounded-full bg-white p-2 shadow'
+            />
+            React
+          </li>
+        </ul>
+      </div>
     </section>
   )
 }
