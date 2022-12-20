@@ -7,6 +7,7 @@ const AboutMeSection = () => {
 
   return (
     <section
+      id='about-me'
       className={`group flex flex-col-reverse space-y-4 space-y-reverse delay-300 duration-[1500ms] md:flex-row md:space-x-4 md:space-y-0 ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}

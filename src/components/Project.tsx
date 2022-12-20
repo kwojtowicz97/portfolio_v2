@@ -22,6 +22,7 @@ const Project = ({ project, initialFeatureIndex, reversed }: TProjectProps) => {
   }
   return (
     <div
+      id='projects'
       className={`rounded-3xl bg-gray-200 delay-700 duration-[1500ms] ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}

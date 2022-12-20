@@ -7,6 +7,7 @@ const Footer = () => {
 
   return (
     <footer
+      id='contact'
       className={`group mt-4 flex space-x-4 delay-1000 duration-[1500ms] ${
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}

@@ -16,15 +16,11 @@ export const Navbar = () => {
       <a href='/'>Kamil Wójtowicz</a>
 
       <nav className='hidden space-x-7 sm:block'>
-        <a className='active: text-gray-500' href='#home' id='home'>
+        <a className='active: text-gray-500' href='#home'>
           Home
         </a>
-        <a href='#projects' id='projects'>
-          Projects
-        </a>
-        <a href='#contact' id='contact'>
-          Contact
-        </a>
+        <a href='#projects'>Projects</a>
+        <a href='#contact'>Contact</a>
       </nav>
     </header>
   )
