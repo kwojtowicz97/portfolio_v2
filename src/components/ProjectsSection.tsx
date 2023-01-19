@@ -10,7 +10,7 @@ type TProjectsSectionProps = {
   project: TProject
   currentFeature: TFeature
   onFeatureClickHandler: (feature: TFeature) => void
-  setTicking: React.Dispatch<React.SetStateAction<boolean>>
+  // setTicking: React.Dispatch<React.SetStateAction<boolean>>
   setNextFeature: () => void
   setPrevFeature: () => void
 }
@@ -21,7 +21,7 @@ const ProjectsSection = ({
   project,
   currentFeature,
   onFeatureClickHandler,
-  setTicking,
+  // setTicking,
   setNextFeature,
   setPrevFeature,
 }: TProjectsSectionProps) => {
@@ -30,21 +30,21 @@ const ProjectsSection = ({
     setTimeout(() => setSectionTranslate(true), 100)
   }, [])
 
-  const mouseEnterHandler = () => {
-    setTicking(false)
-  }
+  // const mouseEnterHandler = () => {
+  //   setTicking(false)
+  // }
 
-  const mouseLeaveHandler = () => {
-    setTicking(true)
-  }
+  // const mouseLeaveHandler = () => {
+  //   setTicking(true)
+  // }
 
   return (
     <div
       className={`group relative my-2 flex items-center justify-center transition-transform duration-[1500ms] xl:justify-start xl:space-x-4 ${
         reversed ? 'flex-row-reverse space-x-reverse' : 'flex-row'
       } ${sectionTranslate ? 'opacity-100' : 'opacity-0'}`}
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
+      // onMouseEnter={mouseEnterHandler}
+      // onMouseLeave={mouseLeaveHandler}
     >
       <div className='ml-10 hidden aspect-square w-1/3 xl:block'>
         <div

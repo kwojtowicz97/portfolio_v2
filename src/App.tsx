@@ -13,6 +13,8 @@ function App() {
         <main className='flex flex-col space-y-4'>
           <AboutMeSection />
           <Project project={projects.jobFinder} />
+          <Project project={projects.logicGatesSimulator} />
+          <Project project={projects.kanban} />
         </main>
         <Footer />
       </div>

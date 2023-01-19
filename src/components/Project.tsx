@@ -37,12 +37,12 @@ const Project = ({ project, initialFeatureIndex, reversed }: TProjectProps) => {
     })
   }
 
-  const [ticking, setTicking] = useState(false)
+  // const [ticking, setTicking] = useState(false)
 
-  useEffect(() => {
-    const timer = setTimeout(() => ticking && setNextFeature(), 2000)
-    return () => clearTimeout(timer)
-  }, [currentFeature, ticking])
+  // useEffect(() => {
+  //   const timer = setTimeout(() => ticking && setNextFeature(), 2000)
+  //   return () => clearTimeout(timer)
+  // }, [currentFeature, ticking])
 
   const onFeatureClickHandler = (feature: TFeature) => {
     setCurrentFeature(feature)
@@ -56,7 +56,7 @@ const Project = ({ project, initialFeatureIndex, reversed }: TProjectProps) => {
     >
       <ProjectDescription project={project} />
       <ProjectsSection
-        setTicking={setTicking}
+        // setTicking={setTicking}
         currentFeature={currentFeature}
         onFeatureClickHandler={onFeatureClickHandler}
         project={project}

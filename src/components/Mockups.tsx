@@ -22,7 +22,7 @@ export const Mockups = ({
 }: TMockupsProps) => {
   return (
     <div className='relative flex aspect-[768/400] w-full justify-center'>
-      <MacbookMockup>
+      <MacbookMockup iPhonePreview={project.iPhonePreview || false}>
         <PhotosCarousel
           carouselSlideAxis='y'
           items={project.features}
@@ -31,15 +31,17 @@ export const Mockups = ({
           onFeatureClickHandler={onFeatureClickHandler}
         />
       </MacbookMockup>
-      <IPhoneMockup left='415px'>
-        <PhotosCarousel
-          carouselSlideAxis='x'
-          items={project.features}
-          ItemRender={IPhoneListItem}
-          currentFeature={currentFeature}
-          onFeatureClickHandler={onFeatureClickHandler}
-        />
-      </IPhoneMockup>
+      {project.iPhonePreview ? (
+        <IPhoneMockup left='415px'>
+          <PhotosCarousel
+            carouselSlideAxis='x'
+            items={project.features}
+            ItemRender={IPhoneListItem}
+            currentFeature={currentFeature}
+            onFeatureClickHandler={onFeatureClickHandler}
+          />
+        </IPhoneMockup>
+      ) : null}
     </div>
   )
 }

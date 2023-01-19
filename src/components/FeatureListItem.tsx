@@ -18,7 +18,7 @@ export const FeatureListItem = ({
     >
       <div
         className={`flex select-none items-center text-center duration-300 ${
-          isCurrent ? 'scale-110 font-semibold opacity-100' : 'none opacity-0'
+          isCurrent ? 'font-semibold opacity-100' : 'none opacity-0'
         }`}
       >
         {feature.name}

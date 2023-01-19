@@ -3,11 +3,16 @@ import { useTransitionCarousel } from 'react-spring-carousel'
 
 type TMacbookMockupProps = {
   children: React.ReactNode
+  iPhonePreview: boolean
 }
 
-const MacbookMockup = ({ children }: TMacbookMockupProps) => {
+const MacbookMockup = ({ children, iPhonePreview }: TMacbookMockupProps) => {
   return (
-    <div className='absolute h-full -translate-x-[5%]'>
+    <div
+      className={`absolute h-full ${
+        iPhonePreview ? `-translate-x-[5%]` : `translate-x-[15%]`
+      }`}
+    >
       <div className='absolute top-[4.3%] left-1/2 aspect-[16/10] w-[79%] -translate-x-1/2 overflow-hidden'>
         {children}
       </div>
