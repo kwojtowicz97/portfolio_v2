@@ -3,6 +3,7 @@ import { TFeature, TProject } from '../data'
 import useInterval from '../hooks/useInterval'
 import ProjectDescription from './ProjectDescription'
 import ProjectsSection from './ProjectsSection'
+import ProjectTechnologiesSection from './ProjectTechnologiesSection'
 
 type TProjectProps = {
   project: TProject
@@ -55,6 +56,7 @@ const Project = ({ project, initialFeatureIndex, reversed }: TProjectProps) => {
       }`}
     >
       <ProjectDescription project={project} />
+      <ProjectTechnologiesSection technologies={project.technologies || []} />
       <ProjectsSection
         // setTicking={setTicking}
         currentFeature={currentFeature}

@@ -1,3 +1,5 @@
+import { type } from '@testing-library/user-event/dist/type'
+
 export type TProjects = {
   [key: string]: TProject
 }
@@ -15,6 +17,60 @@ export type TProject = {
   header: string
   features: TFeature[]
   iPhonePreview?: boolean
+  technologies?: TTechnology[]
+}
+
+export type TTechnology = {
+  name: string
+  logo?: string
+  url: string
+}
+
+const technologies: { [key: string]: TTechnology } = {
+  react: {
+    name: 'React',
+    url: 'https://reactjs.org/',
+  },
+  typeScript: {
+    name: 'TypeScript',
+    url: 'https://www.typescriptlang.org/',
+  },
+  node: {
+    name: 'Node.js',
+    url: 'https://nodejs.org/',
+  },
+  express: {
+    name: 'Express',
+    url: 'https://expressjs.com/',
+  },
+  mongoDB: {
+    name: 'MongoDB',
+    url: 'https://www.mongodb.com/',
+  },
+  mongoose: {
+    name: 'Mongoose',
+    url: 'https://mongoosejs.com/',
+  },
+  bootstrap: {
+    name: 'Bootstrap',
+    url: 'https://getbootstrap.com/',
+  },
+  reactQuery: {
+    name: 'React Query',
+    url: 'https://react-query-v3.tanstack.com/',
+  },
+  reactRouter: {
+    name: 'React Router',
+    url: 'https://react-query-v3.tanstack.com/',
+  },
+  JWT: {
+    name: 'JSON Web Token',
+    url: 'https://jwt.io/',
+  },
+  bcrypt: {
+    name: 'Bcrypt',
+    url: 'https://bcrypt.online/',
+  },
 }
 
 export const projects: TProjects = {
@@ -24,6 +80,17 @@ export const projects: TProjects = {
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat itaque neque maxime suscipit, magnam, odit aliquid ipsa nihil, nam laborum illo mollitia officia est. Accusamus maxime non impedit dicta odit fugiat dolor commodi, suscipit, minus hic blanditiis, est beatae voluptates possimus! Ea, consequatur corrupti dolorum beatae sunt perferendis fugiat fuga!',
     header: 'Job posting website',
     iPhonePreview: true,
+    technologies: [
+      technologies.react,
+      technologies.typeScript,
+      technologies.node,
+      technologies.express,
+      technologies.mongoDB,
+      technologies.mongoose,
+      technologies.bootstrap,
+      technologies.JWT,
+      technologies.bcrypt,
+    ],
     features: [
       {
         id: '1',
