@@ -14,6 +14,7 @@ export type TFeature = {
 export type TProject = {
   name: string
   description: string
+  live: string
   header: string
   features: TFeature[]
   iPhonePreview?: boolean
@@ -71,15 +72,44 @@ const technologies: { [key: string]: TTechnology } = {
     name: 'Bcrypt',
     url: 'https://bcrypt.online/',
   },
+  reactFlow: {
+    name: 'React Flow',
+    url: 'https://reactflow.dev/',
+  },
+  CSSModules: {
+    name: 'CSS Modules',
+    url: 'https://github.com/css-modules/css-modules',
+  },
+  DnD: {
+    name: 'React DnD',
+    url: 'https://react-dnd.github.io/react-dnd/about',
+  },
+  CSS: {
+    name: 'CSS',
+    url: 'https://pl.wikipedia.org/wiki/CSS',
+  },
+  JS: {
+    name: 'JavaScript',
+    url: 'https://www.javascript.com/',
+  },
+  leaflet: {
+    name: 'React Leaflet',
+    url: 'https://react-leaflet.js.org/',
+  },
+  redux: {
+    name: 'React Redux',
+    url: 'https://react-redux.js.org/',
+  },
 }
 
 export const projects: TProjects = {
   jobFinder: {
     name: 'Job Finder',
     description:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat itaque neque maxime suscipit, magnam, odit aliquid ipsa nihil, nam laborum illo mollitia officia est. Accusamus maxime non impedit dicta odit fugiat dolor commodi, suscipit, minus hic blanditiis, est beatae voluptates possimus! Ea, consequatur corrupti dolorum beatae sunt perferendis fugiat fuga!',
-    header: 'Job posting website',
+      'The website features a job finding platform that allows users to easily search and apply for job offers, create and manage their CV, browse companies, and read and write reviews. The website is designed to be fully responsive and accessible on both desktop and mobile devices. Users can create accounts and log in to access additional features, such as the ability to add new job offers and view received applications for companies.',
     iPhonePreview: true,
+    header: '',
+    live: '',
     technologies: [
       technologies.react,
       technologies.typeScript,
@@ -87,6 +117,7 @@ export const projects: TProjects = {
       technologies.express,
       technologies.mongoDB,
       technologies.mongoose,
+      technologies.reactQuery,
       technologies.bootstrap,
       technologies.JWT,
       technologies.bcrypt,
@@ -183,6 +214,13 @@ export const projects: TProjects = {
     description:
       'The website allows users to create projects and add lists, such as "to do," "in progress," and "done." Tasks can be added to each list and can be moved between lists by dragging and dropping them. The website also features a switch between Kanban board view and list view. The list view includes filters for easy organization and task management.',
     header: 'Tasks management website',
+    live: 'https://kanban-board-sigma-six.vercel.app/',
+    technologies: [
+      technologies.react,
+      technologies.typeScript,
+      technologies.DnD,
+      technologies.CSSModules,
+    ],
     features: [
       {
         id: '1',
@@ -223,8 +261,16 @@ export const projects: TProjects = {
   },
   logicGatesSimulator: {
     name: 'Logic gates simulator',
-    description: '',
+    description:
+      'It is a tool for simulating and experimenting with digital logic circuits. On the website, users can easily add logic gates from the sidebar and connect them using wires to create complex circuit diagrams. The website also features a reusable block functionality, allowing users to save frequently used logic gate combinations for easy access. Additionally, the website includes a project feature, where users can save their circuit diagrams and access them later from local storage.',
     header: 'Website to simulate logic gates systems',
+    live: 'https://logic-gates-simulator-zeta.vercel.app/',
+    technologies: [
+      technologies.react,
+      technologies.typeScript,
+      technologies.reactFlow,
+      technologies.CSS,
+    ],
     features: [
       {
         id: '1',
@@ -250,6 +296,53 @@ export const projects: TProjects = {
         id: '5',
         name: 'Save project to local storage manually or enable autosaving option',
         mbPhoto: '../assets/mb_lgs5.png',
+      },
+    ],
+  },
+  extinguisherManagementSystem: {
+    name: 'Fire extinguisher management system',
+    description:
+      'The fire extinguisher management system website is designed to make managing a large number of extinguishers easier. The website features an interactive map of a building that shows the locations of all the points where extinguishers should be placed. Users can easily check data about each point and extinguisher, including inspection status and assigned extinguisher type. The website also includes a sidebar that lists all potential dangers and warnings, such as overdue inspections or points without extinguishers. Users can also add new points to the map and add new extinguishers, making it easy to keep the fire extinguisher management system up-to-date and accurate.',
+    header: 'Website to simulate logic gates systems',
+    live: 'https://extinguisher-management-system.vercel.app/',
+    iPhonePreview: true,
+    technologies: [
+      technologies.react,
+      technologies.JS,
+      technologies.redux,
+      technologies.leaflet,
+      technologies.CSS,
+    ],
+    features: [
+      {
+        id: '1',
+        name: 'Interactive layout of a building with all extinguisher points marked',
+        mbPhoto: '../assets/mb_ems1.png',
+        ipPhoto: '../assets/ip_ems1.png',
+      },
+      {
+        id: '2',
+        name: 'Add new points and extinguishers',
+        mbPhoto: '../assets/mb_ems2.png',
+        ipPhoto: '../assets/ip_ems2.png',
+      },
+      {
+        id: '3',
+        name: 'Display and update data about points and extinguishers',
+        mbPhoto: '../assets/mb_ems3.png',
+        ipPhoto: '../assets/ip_ems3.png',
+      },
+      {
+        id: '4',
+        name: 'Make inspections',
+        mbPhoto: '../assets/mb_ems4.png',
+        ipPhoto: '../assets/ip_ems4.png',
+      },
+      {
+        id: '5',
+        name: 'See all possible dangers and warnings',
+        mbPhoto: '../assets/mb_ems5.png',
+        ipPhoto: '../assets/ip_ems5.png',
       },
     ],
   },

@@ -15,6 +15,7 @@ function App() {
           <Project project={projects.jobFinder} />
           <Project project={projects.logicGatesSimulator} />
           <Project project={projects.kanban} />
+          <Project project={projects.extinguisherManagementSystem} />
         </main>
         <Footer />
       </div>
