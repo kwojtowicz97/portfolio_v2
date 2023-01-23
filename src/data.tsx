@@ -15,6 +15,7 @@ export type TProject = {
   name: string
   description: string
   live: string
+  git: string
   header: string
   features: TFeature[]
   iPhonePreview?: boolean
@@ -27,7 +28,7 @@ export type TTechnology = {
   url: string
 }
 
-const technologies: { [key: string]: TTechnology } = {
+export const technologies: { [key: string]: TTechnology } = {
   react: {
     name: 'React',
     url: 'https://reactjs.org/',
@@ -109,7 +110,8 @@ export const projects: TProjects = {
       'The website features a job finding platform that allows users to easily search and apply for job offers, create and manage their CV, browse companies, and read and write reviews. The website is designed to be fully responsive and accessible on both desktop and mobile devices. Users can create accounts and log in to access additional features, such as the ability to add new job offers and view received applications for companies.',
     iPhonePreview: true,
     header: '',
-    live: '',
+    live: 'https://job-finder-ij9x.vercel.app/',
+    git: 'https://github.com/kwojtowicz97/job_finder',
     technologies: [
       technologies.react,
       technologies.typeScript,
@@ -215,6 +217,7 @@ export const projects: TProjects = {
       'The website allows users to create projects and add lists, such as "to do," "in progress," and "done." Tasks can be added to each list and can be moved between lists by dragging and dropping them. The website also features a switch between Kanban board view and list view. The list view includes filters for easy organization and task management.',
     header: 'Tasks management website',
     live: 'https://kanban-board-sigma-six.vercel.app/',
+    git: 'https://github.com/kwojtowicz97/kanban-board',
     technologies: [
       technologies.react,
       technologies.typeScript,
@@ -224,7 +227,7 @@ export const projects: TProjects = {
     features: [
       {
         id: '1',
-        name: 'Add tasks with tasks title and rich text description to the lists',
+        name: 'Add tasks with title and rich text description to the lists',
         mbPhoto: '../assets/mb_kb1.png',
       },
       {
@@ -265,6 +268,7 @@ export const projects: TProjects = {
       'It is a tool for simulating and experimenting with digital logic circuits. On the website, users can easily add logic gates from the sidebar and connect them using wires to create complex circuit diagrams. The website also features a reusable block functionality, allowing users to save frequently used logic gate combinations for easy access. Additionally, the website includes a project feature, where users can save their circuit diagrams and access them later from local storage.',
     header: 'Website to simulate logic gates systems',
     live: 'https://logic-gates-simulator-zeta.vercel.app/',
+    git: 'https://github.com/kwojtowicz97/logic-gates-simulator',
     technologies: [
       technologies.react,
       technologies.typeScript,
@@ -305,6 +309,7 @@ export const projects: TProjects = {
       'The fire extinguisher management system website is designed to make managing a large number of extinguishers easier. The website features an interactive map of a building that shows the locations of all the points where extinguishers should be placed. Users can easily check data about each point and extinguisher, including inspection status and assigned extinguisher type. The website also includes a sidebar that lists all potential dangers and warnings, such as overdue inspections or points without extinguishers. Users can also add new points to the map and add new extinguishers, making it easy to keep the fire extinguisher management system up-to-date and accurate.',
     header: 'Website to simulate logic gates systems',
     live: 'https://extinguisher-management-system.vercel.app/',
+    git: 'https://github.com/kwojtowicz97/extinguisher_management_system',
     iPhonePreview: true,
     technologies: [
       technologies.react,
