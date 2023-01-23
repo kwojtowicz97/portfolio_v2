@@ -21,9 +21,12 @@ const Footer = () => {
           phone to discuss any opportunities you may have.
         </p>
         <div className='mt-auto flex'>
-          <button className='mt-10 rounded-full bg-black py-3 px-8 text-white transition-colors hover:bg-gray-800'>
+          <a
+            href='mailto:kamilwojtowicz079@gmail.com'
+            className='mt-10 rounded-full bg-black py-3 px-8 text-white transition-colors hover:bg-gray-800'
+          >
             Contact me
-          </button>
+          </a>
         </div>
       </div>
     </footer>

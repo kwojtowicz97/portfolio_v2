@@ -10,7 +10,7 @@ const MacbookMockup = ({ children, iPhonePreview }: TMacbookMockupProps) => {
   return (
     <div
       className={`absolute h-full ${
-        iPhonePreview ? `-translate-x-[5%]` : `translate-x-[5%]`
+        iPhonePreview ? `-translate-x-[5%]` : `translate-x-[1%]`
       }`}
     >
       <div className='absolute top-[4.3%] left-1/2 aspect-[16/10] w-[79%] -translate-x-1/2 overflow-hidden'>

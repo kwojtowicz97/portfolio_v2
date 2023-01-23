@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { technologies } from '../data'
 import useInterval from '../hooks/useInterval'
+import { TechnologyBagde } from './ProjectTechnologiesSection'
 
 const AboutMeSection = () => {
   const [sectionTranslate, setSectionTranslate] = useState(false)
@@ -12,8 +14,7 @@ const AboutMeSection = () => {
         sectionTranslate ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      <div className='relative box-border flex flex-col overflow-hidden rounded-3xl p-10 md:w-2/3'>
-        <div className='absolute top-[-50%] left-[-50%] -z-10 h-[200%] w-[200%] animate-[spin_3s_linear_infinite] bg-gradient-to-r from-sky-500 to-sky-700'></div>
+      <div className='relative box-border flex flex-col overflow-hidden rounded-3xl border bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400 p-10 md:w-2/3'>
         <h1 className='text-5xl font-semibold'>
           Hello, I'm Kamil <br />
           Frontend Developer
@@ -26,38 +27,36 @@ const AboutMeSection = () => {
           technologies.
         </p>
         <div className='relative mt-10 flex flex-col space-y-4 md:mt-auto md:flex-row md:space-x-3 md:space-y-0'>
-          <button className='rounded-full bg-black py-3 px-8 text-white transition-colors hover:bg-gray-800'>
+          <a
+            href='mailto:kamilwojtowicz079@gmail.com'
+            className='rounded-full bg-black py-3 px-8 text-white transition-colors hover:bg-gray-800'
+          >
             <i className='fa-regular fa-envelope mr-1'></i>Contact me
-          </button>
+          </a>
           <div className='mx-12 flex h-12 justify-between md:h-auto md:space-x-3'>
-            <button className='aspect-square h-full rounded-full bg-white text-xl transition-colors hover:bg-gray-200'>
+            <a
+              href='tel:792704421'
+              className='flex aspect-square h-full content-center items-center justify-center rounded-full bg-white align-middle text-xl transition-colors hover:bg-gray-200'
+            >
               <i className='fa-solid fa-phone'></i>
-            </button>
-            <button className='aspect-square h-full rounded-full bg-white text-2xl transition-colors hover:bg-gray-200'>
+            </a>
+            <a
+              href='https://github.com/kwojtowicz97'
+              className='flex aspect-square h-full content-center items-center justify-center rounded-full bg-white text-2xl transition-colors hover:bg-gray-200'
+            >
               <i className='fa-brands fa-github'></i>
-            </button>
-            <button className='aspect-square h-full rounded-full bg-white text-xl transition-colors hover:bg-gray-200'>
+            </a>
+            <a className='flex aspect-square h-full content-center items-center justify-center rounded-full bg-white text-xl transition-colors hover:bg-gray-200'>
               <i className='fa-solid fa-file'></i>
-            </button>
+            </a>
           </div>
         </div>
       </div>
-      <div className='h-[500px] max-h-60 rounded-3xl bg-sky-100 object-cover p-5 md:max-h-fit md:w-1/3'>
-        <ul className='space-y-2 font-semibold'>
-          <li>
-            <img
-              src='https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg'
-              className='fa-brands fa-react mr-2 w-8 rounded-full bg-white p-2 shadow'
-            />
-            React
-          </li>
-          <li>
-            <img
-              src='https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg'
-              className='fa-brands fa-react mr-2 w-8 rounded-full bg-white p-2 shadow'
-            />
-            React
-          </li>
+      <div className='rounded-3xl border bg-slate-100 object-cover p-5 md:max-h-fit md:w-1/3'>
+        <ul className='flex flex-wrap py-2'>
+          {Object.values(technologies).map((technology) => (
+            <TechnologyBagde technology={technology} />
+          ))}
         </ul>
       </div>
     </section>
