@@ -46,7 +46,11 @@ const AboutMeSection = () => {
             >
               <i className='fa-brands fa-github'></i>
             </a>
-            <a className='flex aspect-square h-full content-center items-center justify-center rounded-full bg-white text-xl transition-colors hover:bg-gray-200'>
+            <a
+              href={require('../assets/CV_Kamil_Wójtowicz.pdf')}
+              download
+              className='flex aspect-square h-full content-center items-center justify-center rounded-full bg-white text-xl transition-colors hover:bg-gray-200'
+            >
               <i className='fa-solid fa-file'></i>
             </a>
           </div>
