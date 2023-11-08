@@ -1,32 +1,32 @@
-import React from 'react'
-import AboutMeSection from './components/AboutMeSection'
-import Footer from './components/Footer'
-import { Navbar } from './components/Navbar'
-import Project from './components/Project'
-import { useEffect, useState } from 'react'
-import { projects } from './data'
+import React from 'react';
+import AboutMeSection from './components/AboutMeSection';
+import Footer from './components/Footer';
+import { Navbar } from './components/Navbar';
+import Project from './components/Project';
+import { useEffect, useState } from 'react';
+import { projects } from './data';
 
 function App() {
   useEffect(() => {
     const loadImage = (image: string) => {
       return new Promise((resolve, reject) => {
-        const loadImg = new Image()
-        loadImg.src = image
-        loadImg.onload = () => resolve(image)
+        const loadImg = new Image();
+        loadImg.src = image;
+        loadImg.onload = () => resolve(image);
 
-        loadImg.onerror = (err) => reject(err)
-      })
-    }
+        loadImg.onerror = (err) => reject(err);
+      });
+    };
 
     const IMAGES = Object.values(projects)
       .filter((project) => project.iPhonePreview)
       .map((project) =>
         project.features.map((feature) => [feature.ipPhoto, feature.mbPhoto])
       )
-      .flat(3)
+      .flat(3);
 
-    Promise.all(IMAGES.map((image) => image && loadImage(image)))
-  }, [])
+    Promise.all(IMAGES.map((image) => image && loadImage(image)));
+  }, []);
   return (
     <div className='App'>
       <div className='mx-auto flex flex-col px-4 xl:max-w-6xl xl:p-0 '>
@@ -43,7 +43,7 @@ function App() {
         <Footer />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

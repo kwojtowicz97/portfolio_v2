@@ -1,41 +1,67 @@
-import { type } from '@testing-library/user-event/dist/type'
-
 export type TProjects = {
-  [key: string]: TProject
-}
+  [key: string]: TProject;
+};
 
 export type TFeature = {
-  id: string
-  name: string
-  mbPhoto: string
-  ipPhoto?: string
-}
+  id: string;
+  name: string;
+  mbPhoto: string;
+  ipPhoto?: string;
+};
 
 export type TProject = {
-  name: string
-  description: string
-  live: string
-  git: string
-  header: string
-  features: TFeature[]
-  iPhonePreview?: boolean
-  technologies?: TTechnology[]
-}
+  name: string;
+  description: string;
+  live: string;
+  git: string;
+  header: string;
+  features: TFeature[];
+  iPhonePreview?: boolean;
+  technologies?: TTechnology[];
+};
 
 export type TTechnology = {
-  name: string
-  logo?: string
-  url: string
-}
+  name: string;
+  logo?: string;
+  url: string;
+};
 
 export const technologies: { [key: string]: TTechnology } = {
+  typeScript: {
+    name: 'TypeScript',
+    url: 'https://www.typescriptlang.org/',
+  },
   react: {
     name: 'React',
     url: 'https://reactjs.org/',
   },
-  typeScript: {
-    name: 'TypeScript',
-    url: 'https://www.typescriptlang.org/',
+  next: {
+    name: 'Next.js',
+    url: 'https://nextjs.org/',
+  },
+  vue: {
+    name: 'Vue 3',
+    url: 'https://vuejs.org/',
+  },
+  nuxt: {
+    name: 'Nuxt.js',
+    url: 'https://nuxtjs.org/',
+  },
+  svelte: {
+    name: 'Svelte',
+    url: 'https://svelte.dev/',
+  },
+  sveltekit: {
+    name: 'SvelteKit',
+    url: 'https://sveltekit.vercel.app/',
+  },
+  angular: {
+    name: 'Angular',
+    url: 'https://angular.io/',
+  },
+  tailwind: {
+    name: 'Tailwind CSS',
+    url: 'https://tailwindcss.com/',
   },
   node: {
     name: 'Node.js',
@@ -101,7 +127,39 @@ export const technologies: { [key: string]: TTechnology } = {
     name: 'React Redux',
     url: 'https://react-redux.js.org/',
   },
-}
+  nest: {
+    name: 'Nest.js',
+    url: 'https://nestjs.com/',
+  },
+  sql: {
+    name: 'MySQL',
+    url: 'https://www.mysql.com/',
+  },
+  java: {
+    name: 'Java',
+    url: 'https://www.java.com/',
+  },
+  spring: {
+    name: 'Spring Boot',
+    url: 'https://spring.io/projects/spring-boot',
+  },
+  linux: {
+    name: 'Linux',
+    url: 'https://www.linux.org/',
+  },
+  nginx: {
+    name: 'Nginx',
+    url: 'https://nginx.org/',
+  },
+  elasticsearch: {
+    name: 'Elasticsearch',
+    url: 'https://www.elastic.co/',
+  },
+  kafka: {
+    name: 'Kafka',
+    url: 'https://kafka.apache.org/',
+  },
+};
 
 export const projects: TProjects = {
   jobFinder: {
@@ -110,7 +168,7 @@ export const projects: TProjects = {
       'The website features a job finding platform that allows users to easily search and apply for job offers, create and manage their CV, browse companies, and read and write reviews. The website is designed to be fully responsive and accessible on both desktop and mobile devices. Users can create accounts and log in to access additional features, such as the ability to add new job offers and view received applications for companies.',
     iPhonePreview: true,
     header: '',
-    live: 'https://jobfinder.kwojtowicz.com/',
+    live: 'https://jobfinder.kamilwojtowicz.com/',
     git: 'https://github.com/kwojtowicz97/job_finder',
     technologies: [
       technologies.react,
@@ -216,7 +274,7 @@ export const projects: TProjects = {
     description:
       'The website allows users to create projects and add lists, such as "to do," "in progress," and "done." Tasks can be added to each list and can be moved between lists by dragging and dropping them. The website also features a switch between Kanban board view and list view. The list view includes filters for easy organization and task management.',
     header: 'Tasks management website',
-    live: 'https://kanban.kwojtowicz.com/',
+    live: 'https://kanban.kamilwojtowicz.com/',
     git: 'https://github.com/kwojtowicz97/kanban-board',
     technologies: [
       technologies.react,
@@ -267,7 +325,7 @@ export const projects: TProjects = {
     description:
       'It is a tool for simulating and experimenting with digital logic circuits. On the website, users can easily add logic gates from the sidebar and connect them using wires to create complex circuit diagrams. The website also features a reusable block functionality, allowing users to save frequently used logic gate combinations for easy access. Additionally, the website includes a project feature, where users can save their circuit diagrams and access them later from local storage.',
     header: 'Website to simulate logic gates systems',
-    live: 'https://logicgatessimulator.kwojtowicz.com/',
+    live: 'https://logicgatessimulator.kamilwojtowicz.com/',
     git: 'https://github.com/kwojtowicz97/logic-gates-simulator',
     technologies: [
       technologies.react,
@@ -308,7 +366,7 @@ export const projects: TProjects = {
     description:
       'The fire extinguisher management system website is designed to make managing a large number of extinguishers easier. The website features an interactive map of a building that shows the locations of all the points where extinguishers should be placed. Users can easily check data about each point and extinguisher, including inspection status and assigned extinguisher type. The website also includes a sidebar that lists all potential dangers and warnings, such as overdue inspections or points without extinguishers. Users can also add new points to the map and add new extinguishers, making it easy to keep the fire extinguisher management system up-to-date and accurate.',
     header: 'Website to simulate logic gates systems',
-    live: 'https://fems.kwojtowicz.com/',
+    live: 'https://fems.kamilwojtowicz.com/',
     git: 'https://github.com/kwojtowicz97/extinguisher_management_system',
     iPhonePreview: true,
     technologies: [
@@ -351,4 +409,4 @@ export const projects: TProjects = {
       },
     ],
   },
-}
+};
