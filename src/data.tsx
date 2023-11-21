@@ -325,7 +325,7 @@ export const projects: TProjects = {
     description:
       'It is a tool for simulating and experimenting with digital logic circuits. On the website, users can easily add logic gates from the sidebar and connect them using wires to create complex circuit diagrams. The website also features a reusable block functionality, allowing users to save frequently used logic gate combinations for easy access. Additionally, the website includes a project feature, where users can save their circuit diagrams and access them later from local storage.',
     header: 'Website to simulate logic gates systems',
-    live: 'https://logicgatessimulator.kamilwojtowicz.com/',
+    live: 'https://logicgates.kamilwojtowicz.com/',
     git: 'https://github.com/kwojtowicz97/logic-gates-simulator',
     technologies: [
       technologies.react,
